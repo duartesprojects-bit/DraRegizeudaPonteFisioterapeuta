@@ -14,7 +14,7 @@ import { MessageCircle } from 'lucide-react';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-stone-50 font-sans selection:bg-teal-200 selection:text-teal-900 pb-20 md:pb-0">
+    <div className="min-h-screen bg-stone-50 font-sans selection:bg-teal-200 selection:text-teal-900">
       <Navbar />
       <main>
         <Hero />
@@ -25,18 +25,16 @@ export default function App() {
       </main>
       <Footer />
 
-      {/* Floating Button Mobile */}
-      <div className="fixed bottom-4 left-4 right-4 z-50 md:hidden">
-        <a
-          href="https://wa.me/5585988307687"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center bg-[#25D366] text-white px-6 py-4 rounded-full font-bold shadow-[0_8px_30px_rgb(0,0,0,0.2)] active:scale-95 transition-transform"
-        >
-          <MessageCircle className="w-6 h-6 mr-2" />
-          Agendar consulta
-        </a>
-      </div>
+      {/* Floating WhatsApp Balloon */}
+      <a
+        href="https://wa.me/5585988307687"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Agendar consulta pelo WhatsApp"
+        className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-teal-700 hover:bg-teal-800 text-white rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-teal-400/40"
+      >
+        <MessageCircle className="w-7 h-7 sm:w-8 sm:h-8" />
+      </a>
     </div>
   );
 }
